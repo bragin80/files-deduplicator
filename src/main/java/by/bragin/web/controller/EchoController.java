@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/echo")
 public class EchoController {
 
-    @GetMapping("")
+    @GetMapping
     public ResponseEntity<String> echo() {
         return new ResponseEntity<>("Hello world!", HttpStatus.OK);
     }
