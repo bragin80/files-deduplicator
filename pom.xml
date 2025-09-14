@@ -18,7 +18,7 @@
 
         <!-- compiler -->
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
-        <!-- pringboot -->
+        <!-- spring-boot -->
         <spring-boot.version>3.5.5</spring-boot.version>
     </properties>
 
