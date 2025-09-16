@@ -25,13 +25,15 @@
 </head>
 <body>
 <div class="form-container">
-    <form action="/api/v1/echo" method="get">
+    <form action="/api/v1/deduplicator" method="get">
         <div style="display: flex; gap: 10px; align-items: center;">
+            <span class="folder-icon">📁</span>
             <input type="file"
                    id="path"
                    name="path"
                    placeholder="Enter path"
                    style="flex: 1;"
+                   webkitdirectory
                    required>
             <button type="submit" style="white-space: nowrap;">Submit</button>
         </div>
