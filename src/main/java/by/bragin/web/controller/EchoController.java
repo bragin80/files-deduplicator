@@ -1,9 +1,9 @@
 package by.bragin.web.controller;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class EchoController {
 
     @GetMapping
-    public ResponseEntity<String> echo() {
-        return new ResponseEntity<>("Hello world!", HttpStatus.OK);
+    @ResponseStatus(HttpStatus.OK)
+    public String echo() {
+        return "Hello World!";
     }
 }
