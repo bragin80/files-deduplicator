@@ -1,5 +1,7 @@
 package by.bragin.web.controller;
 
+import by.bragin.service.FileService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,9 +10,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/v1/deduplicator")
 public class FilesDeduplicatorController {
 
+    @Autowired
+    private FileService fileService;
+
     @GetMapping
-    public ResponseEntity<String> folderPath(@RequestParam(defaultValue
-            = "folder-path") String path) {
-        return new ResponseEntity<>(path, HttpStatus.OK);
+    public ResponseEntity<?> folderPath(@RequestParam(name = "path") String path) {
+        return new ResponseEntity<>(fileService.scan(path), HttpStatus.OK);
     }
 }
