@@ -1,17 +1,20 @@
 package by.bragin.web.controller;
 
 import by.bragin.service.FileService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@RequiredArgsConstructor
 @RequestMapping("/api/v1/deduplicator")
+@RestController
 public class FilesDeduplicatorController {
 
-    @Autowired
-    private FileService fileService;
+    private final FileService fileService;
 
     @GetMapping
     public ResponseEntity<?> folderPath(@RequestParam(name = "path") String path) {
