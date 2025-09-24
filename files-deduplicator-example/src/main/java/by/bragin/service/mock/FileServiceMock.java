@@ -14,7 +14,6 @@ public class FileServiceMock implements FileService {
 
     @Override
     public List<String> scanTrigger() {
-        List<String> files = List.of("/Pictures/img1.jpg", "/Pictures/img1(1).jpg");
-        return files;
+        return List.of("/Pictures/img1.jpg", "/Pictures/img1(1).jpg");
     }
 }
