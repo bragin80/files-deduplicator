@@ -1,1 +1,3 @@
-services:
+include:
+# POSTGRES
+  - docker/docker-compose-postgresql.yaml
