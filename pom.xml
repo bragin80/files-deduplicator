@@ -5,9 +5,7 @@
     <groupId>by.bragin</groupId>
     <artifactId>files-deduplicator</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-
-    <name>files-deduplicator</name>
+    <packaging>pom</packaging>
 
     <properties>
         <!-- jdk -->
@@ -18,14 +16,20 @@
 
         <!-- compiler -->
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <!-- code generator -->
+        <lombok.version>1.18.40</lombok.version>
         <!-- springboot -->
         <spring-boot.version>3.5.5</spring-boot.version>
-        <!-- lombok -->
-        <lombok.version>1.18.40</lombok.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -36,41 +40,18 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- общие зависимости для всех модулей -->
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!-- test -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Spring Boot Maven Plugin (обязательный) -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
             <!-- Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -80,7 +61,7 @@
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                     <encoding>UTF-8</encoding>
-                    <parameters>true</parameters> <!-- для Jackson и других библиотек -->
+                    <parameters>true</parameters>
                     <!-- Конфигурация для Lombok -->
                     <annotationProcessorPaths>
                         <path>
@@ -93,4 +74,8 @@
             </plugin>
         </plugins>
     </build>
+
+    <modules>
+        <module>files-deduplicator-example</module>
+    </modules>
 </project>

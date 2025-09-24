@@ -1,0 +1,2 @@
+### шаблоны проектирования
+https://refactoring.guru/ru/design-patterns
