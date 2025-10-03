@@ -86,6 +86,7 @@
 
     <modules>
         <module>files-deduplicator-example</module>
+        <module>fs-accessor-api</module>
         <module>fs-accessor-service</module>
     </modules>
 </project>

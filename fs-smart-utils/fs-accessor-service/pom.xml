@@ -10,6 +10,12 @@
     <artifactId>fs-accessor-service</artifactId>
 
     <dependencies>
+        <!-- by.bragin -->
+        <dependency>
+            <groupId>by.bragin</groupId>
+            <artifactId>fs-accessor-api</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
         <!-- springboot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
