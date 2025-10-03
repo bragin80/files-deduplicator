@@ -20,6 +20,8 @@
         <lombok.version>1.18.40</lombok.version>
         <!-- springboot -->
         <spring-boot.version>3.5.5</spring-boot.version>
+        <!-- vulns fix -->
+        <apache-commons.version>3.18.0</apache-commons.version>
     </properties>
 
     <dependencyManagement>
@@ -36,6 +38,13 @@
                 <version>${spring-boot.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
+            </dependency>
+
+            <!-- vulns fix -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache-commons.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

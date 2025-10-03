@@ -1,4 +1,4 @@
-package by.bragin;
+package by.bragin.accessor;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

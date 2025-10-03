@@ -1,4 +1,4 @@
-package by.bragin;
+package by.bragin.accessor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
