@@ -1,0 +1,13 @@
+services:
+  postgresql:
+    image: postgres:latest
+    container_name: ${PG_CONTAINER_NAME:-postgres}
+    restart: no
+    ports:
+      - ${PG_PORT:-5432}:5432
+    environment:
+      POSTGRES_DB: ${PG_DB:-postgres}
+      POSTGRES_USER: ${PG_USER:-postgres}
+      POSTGRES_PASSWORD: ${PG_PASSWORD:-postgres}
+    volumes:
+      - ${PG_VOLUME:-./volumes/postgres}:/var/lib/postgresql
