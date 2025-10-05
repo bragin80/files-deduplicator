@@ -4,7 +4,7 @@
 
     <groupId>by.bragin</groupId>
     <artifactId>fs-smart-utils</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -16,10 +16,12 @@
 
         <!-- compiler -->
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <maven-surefare-plugin.version>3.5.4</maven-surefare-plugin.version>
         <!-- code generator -->
         <lombok.version>1.18.40</lombok.version>
         <!-- springboot -->
         <spring-boot.version>3.5.5</spring-boot.version>
+        <spring-cloud-openfeign.version>4.3.0</spring-cloud-openfeign.version>
         <!-- vulns fix -->
         <apache-commons.version>3.18.0</apache-commons.version>
     </properties>
@@ -38,6 +40,12 @@
                 <version>${spring-boot.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
+            </dependency>
+            <!-- spring cloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${spring-cloud-openfeign.version}</version>
             </dependency>
 
             <!-- vulns fix -->
@@ -81,11 +89,19 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefare-plugin.version}</version>
+                <configuration>
+                    <argLine>-Djava.awt.headless=true</argLine>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
     <modules>
-        <module>files-deduplicator-example</module>
+        <module>fs-accessor-api</module>
         <module>fs-accessor-service</module>
     </modules>
 </project>
