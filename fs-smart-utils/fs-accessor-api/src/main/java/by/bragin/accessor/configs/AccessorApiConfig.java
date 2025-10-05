@@ -1,4 +1,4 @@
-package by.bragin.accessor.config;
+package by.bragin.accessor.configs;
 
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
