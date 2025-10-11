@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ApiResponses(
 )
-@Tag(name = "Контроллер предоставляет доступ к файлам")
+@Tag(name = "Accessor", description = "Контоллер предоставляет доступ к методам работы с файлами.")
 public interface AccessorContract {
 
     @Operation(
