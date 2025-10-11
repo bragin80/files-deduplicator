@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: devalex80
+      changes:
+        - sqlFile:
+            path: db_changelog/251011/sql/create-file-table.sql

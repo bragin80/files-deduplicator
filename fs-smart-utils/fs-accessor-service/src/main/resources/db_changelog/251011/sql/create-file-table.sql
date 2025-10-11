@@ -1,0 +1,9 @@
+CREATE TABLE file (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    path VARCHAR(1024) NOT NULL,
+    size BIGINT,
+    md5 VARCHAR(32),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP
+);
