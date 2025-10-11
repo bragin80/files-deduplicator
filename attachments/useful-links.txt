@@ -1,2 +1,7 @@
 ### шаблоны проектирования
 https://refactoring.guru/ru/design-patterns
+### spring
+https://docs.spring.io/
+https://www.baeldung.com/
+
+http://localhost:8080/swagger-ui/index.html
