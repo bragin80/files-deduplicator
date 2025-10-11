@@ -8,5 +8,5 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Service
 public class FileServiceImpl implements FileService {
-//    private final FileRepository fileRepository;
+    private final FileRepository fileRepository;
 }

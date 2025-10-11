@@ -1,9 +1,11 @@
 package by.bragin.accessor.configs;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@EnableJpaRepositories
+@EnableJpaAuditing
+@EnableJpaRepositories(basePackages = "by.bragin.accessor.persistence.repository")
 @Configuration
 public class PersistenceConfig {
 }

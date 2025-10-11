@@ -4,6 +4,5 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.TestConfiguration;
 
 @AutoConfigureMockMvc
-@TestConfiguration
 public class TestConfig {
 }
