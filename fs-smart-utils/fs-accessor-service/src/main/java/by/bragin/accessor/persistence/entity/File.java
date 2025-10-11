@@ -17,9 +17,6 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 public class File extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
     @NotNull
     private String name;
     @NotNull
