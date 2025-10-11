@@ -1,2 +1,5 @@
 ### шаблоны проектирования
 https://refactoring.guru/ru/design-patterns
+### spring
+https://docs.spring.io/
+https://www.baeldung.com/

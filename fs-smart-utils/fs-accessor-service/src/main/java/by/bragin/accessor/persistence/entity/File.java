@@ -7,4 +7,5 @@ import lombok.EqualsAndHashCode;
 @Data
 // @Entity
 public class File extends BaseEntity {
+
 }
