@@ -15,7 +15,7 @@ public class AccessorExceptionHandler {
     public ResponseEntity<AccessorErrorInfo> handleException(Exception exception) {
         return ResponseEntity.badRequest().body(
                 AccessorErrorInfo.builder()
-                        .status(HttpStatus.BAD_REQUEST)
+                        .status(HttpStatus.INTERNAL_SERVER_ERROR)
                         .message(exception.getMessage())
                         .build()
         );
