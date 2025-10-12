@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 @Service
 public class FileServiceImpl implements FileService {
     private final FileRepository fileRepository;
