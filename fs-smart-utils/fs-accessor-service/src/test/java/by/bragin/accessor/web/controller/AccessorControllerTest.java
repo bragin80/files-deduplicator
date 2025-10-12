@@ -1,18 +1,12 @@
 package by.bragin.accessor.web.controller;
 
+import by.bragin.accessor.AccessorServiceApplicationTest;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest
-public class AccessorControllerTest {
-
-    @Autowired
-    private MockMvc mockMvc;
+public class AccessorControllerTest extends AccessorServiceApplicationTest {
 
     @Test
     public void testEcho() throws Exception {
