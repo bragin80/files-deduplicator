@@ -14,10 +14,12 @@ public class FileServiceTest extends AccessorServiceApplicationTest {
     @Test
     public void testSaveFile() {
         assertNotNull(
-                File.builder()
-                .name("test.txt")
-                .path("/test/path")
-                .build()
+                fileService.saveFile(
+                        File.builder()
+                                .name("test.txt")
+                                .path("/test/path")
+                                .build()
+                )
         );
     }
 }
