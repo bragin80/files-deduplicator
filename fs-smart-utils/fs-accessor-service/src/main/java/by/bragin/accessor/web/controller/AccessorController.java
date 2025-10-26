@@ -1,7 +1,7 @@
 package by.bragin.accessor.web.controller;
 
 import by.bragin.accessor.api.contract.AccessorContract;
-import by.bragin.accessor.service.ScanService;
+import by.bragin.accessor.service.FilesScanService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class AccessorController implements AccessorContract {
 
-    private final ScanService scanService;
+    private final FilesScanService scanService;
 
     @Override
     public void echo() {
@@ -20,6 +20,6 @@ public class AccessorController implements AccessorContract {
 
     @Override
     public ResponseEntity<List<String>> scan(String path) {
-        return ResponseEntity.accepted().body(scanService.startScan(path));
+        return ResponseEntity.accepted().body(scanService.scanFiles(path));
     }
 }

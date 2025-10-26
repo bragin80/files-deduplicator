@@ -1,7 +1,7 @@
 package by.bragin.accessor.service;
 
 import by.bragin.accessor.AccessorServiceApplicationTest;
-import by.bragin.accessor.persistence.entity.File;
+import by.bragin.accessor.persistence.entity.FileEntity;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -14,7 +14,7 @@ public class FileServiceTest extends AccessorServiceApplicationTest {
     @Test
     public void testSaveFile() {
         assertNotNull(
-                File.builder()
+                FileEntity.builder()
                 .name("test.txt")
                 .path("/test/path")
                 .build()
