@@ -12,5 +12,5 @@ spring:
     hibernate:
       ddl-auto:none
   liquibase:
-    change-log: classpath:db_changelog/changelog-test.yaml
+    change-log: classpath:db_changelog/changelog.yaml
     enabled: true
