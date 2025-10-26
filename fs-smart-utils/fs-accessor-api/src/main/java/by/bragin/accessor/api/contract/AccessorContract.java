@@ -1,5 +1,6 @@
 package by.bragin.accessor.api.contract;
 
+import by.bragin.accessor.dto.FileEntityDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -26,5 +27,5 @@ public interface AccessorContract {
     )
     @PostMapping("/scan")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    ResponseEntity<List<String>> scan(@RequestParam String path);
+    ResponseEntity<List<FileEntityDto>> scan(@RequestParam String path);
 }

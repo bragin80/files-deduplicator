@@ -1,6 +1,7 @@
 package by.bragin.accessor.web.controller;
 
 import by.bragin.accessor.api.contract.AccessorContract;
+import by.bragin.accessor.dto.FileEntityDto;
 import by.bragin.accessor.service.FilesScanService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +19,7 @@ public class AccessorController implements AccessorContract {
     }
 
     @Override
-    public ResponseEntity<List<String>> scan(String path) {
+    public ResponseEntity<List<FileEntityDto>> scan(String path) {
         return ResponseEntity.accepted().body(scanService.scanFiles(path));
     }
 }
