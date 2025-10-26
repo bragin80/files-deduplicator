@@ -11,7 +11,6 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 public class AccessorController implements AccessorContract {
-
     private final FilesScanService scanService;
 
     @Override
